@@ -1,0 +1,517 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px 200px;
+    background-color: #f4f4f4;
+    height: 100%;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2,
+h3 {
+    color: #333;
+}
+
+/* Layout Styles */
+.container {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px #B8B7A3;
+    box-sizing: border-box;
+    border: 2px solid #464646;
+    background-color: #B8B7A3;
+}
+
+.content {
+    width: calc(100% - 400px);
+    padding: 30px;
+    height: calc(100vh - 40px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 400px;
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    height: calc(100vh - 40px);
+}
+
+/* Profile Styles */
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile h2 {
+    margin: 10px 0 5px;
+    color: white;
+}
+
+/* Index Styles */
+
+.takemethere{
+    margin-top: 30px;
+}
+.indexbox a {
+
+    background-color: #B8B7A3;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.smallportfoliobox .portfolio-button:hover {
+    background-color: #a3a297;
+}
+
+/* Links Styling */
+.links {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    text-align: center;
+    margin-right: 35px;
+}
+
+.links li {
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+/* Other Styles */
+.contact {
+    margin-top: 18px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 8px;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation Styles */
+.index .navigation[href="index.html"],
+.aboutme .navigation[href="aboutme.html"],
+.cv .navigation[href="cv.html"],
+.portfolio .navigation[href="portfolio.html"],
+.contact .navigation[href="contact.html"] {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Presentation Styles */
+.header {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.header p {
+    margin-top: 25px;
+    font-size: 45px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.presentationcontainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.workexperience {
+    place-items: center;
+    width: 75%;
+    height: 85vh;
+    margin-left: 20px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.workexperience p {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 35px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.workexperience li {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+
+
+.smallerpresentationcontainers {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.smallpresentationbox {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 353px;
+    margin-bottom: 20px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.smallpresentationbox span {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.smallpresentationbox p {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 35px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.smallpresentationbox li {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+/* CV Styles */
+
+.cvcontainer,
+.indexcontainer,
+.smallerportfoliocontainers {
+    padding: 20px;
+}
+
+.cvbox,
+.indexbox {
+    width: 100%;
+    height: 85vh;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.cvbox p,
+.indexbox p {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cvbox li,
+.indexbox li {
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+}
+
+/* Portfolio Styles */
+.smallerportfoliocontainers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.smallportfoliobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.smallportfoliobox p {
+    text-align: center;
+    font-size: 35px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.smallportfoliobox li {
+    font-size: 20px;
+    list-style-type: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Button Styling */
+.smallportfoliobox .portfolio-button {
+    background-color: #B8B7A3;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.smallportfoliobox .portfolio-button:hover {
+    background-color: #a3a297;
+}
+
+/* Image Styling */
+.portfolioimg {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: #d1d3d5;
+    margin-top: 10px;
+}
+
+.portfolioimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.portfolio-button a {
+    color: white;
+    text-decoration: none;
+}
+
+#modal,
+#modal_numbersgame,
+#modal_schoolprogram {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal__window {
+    position: relative;
+    background-color: #333;
+    height: 300px;
+    padding: 4em 2em;
+}
+
+.modal__close {
+    color: white;
+    position: absolute;
+    margin-top: -84px;
+    margin-right: 5px;
+    right: 0;
+}
+
+.modal__close h1:hover {
+    color: #B8B7A3;
+}
+
+
+.modal__window a {
+    color: white;
+    text-decoration: none;
+}
+
+#modal:not(:target),
+#modal_numbersgame:not(:target),
+#modal_schoolprogram:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal__window h2 {
+    display: grid;
+    place-items: center;
+    margin-top: 0px;
+    font-size: 45px;
+    color: #B8B7A3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal__window p {
+    font-size: 20px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-wrap: break-word;
+    width: 700px;
+}
+
+.githublink a {
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.githublink a:hover {
+    color: #B8B7A3;
+}
+
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1200px (tablets, small desktops) */
+@media (max-width: 1200px) {
+    .container {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .workexperience {
+        width: 60%;
+    }
+
+    .smallpresentationbox {
+        width: 400px;
+    }
+}
+
+/* For screens smaller than 768px (tablets in portrait or large mobile screens) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+        /* Add 20px margin to top, bottom, left, and right */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content {
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+        padding: 20px;
+    }
+
+    .workexperience {
+        width: 90%;
+        height: auto;
+    }
+
+    .smallerpresentationcontainers {
+        flex-direction: column;
+        /* Stack the small boxes vertically */
+        padding: 10px;
+        /* Add some space to the sides */
+    }
+
+    .smallpresentationbox {
+        width: 100%;
+        /* Take full width on smaller screens */
+        height: auto;
+        /* Adjust height based on content */
+    }
+}
+
+/* For screens smaller than 480px (small mobile screens) */
+@media (max-width: 480px) {
+    .presentationheader p {
+        font-size: 20px;
+    }
+
+    .workexperience li {
+        font-size: 18px;
+    }
+
+    .links a {
+        font-size: 1rem;
+    }
+}
