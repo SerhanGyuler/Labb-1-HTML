@@ -1,11 +1,10 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 10px 200px;
     background-color: #f4f4f4;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -17,7 +16,6 @@ h3 {
 /* Layout Styles */
 .container {
     display: flex;
-    margin: 0;
     width: 100%;
     height: 100%;
     box-shadow: 0 4px 8px #B8B7A3;
@@ -34,7 +32,7 @@ h3 {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 400px;
+    width: 20%;
     background-color: #333;
     color: white;
     padding: 30px;
@@ -56,11 +54,12 @@ h3 {
 
 /* Index Styles */
 
-.takemethere{
+.takemethere {
     margin-top: 30px;
 }
-.indexbox a {
 
+.indexbox a {
+    text-decoration: none;
     background-color: #B8B7A3;
     color: black;
     font-size: 20px;
@@ -72,6 +71,11 @@ h3 {
     transition: background 0.3s ease;
 }
 
+.indexbox a:hover {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
 .smallportfoliobox .portfolio-button:hover {
     background-color: #a3a297;
 }
@@ -79,7 +83,6 @@ h3 {
 /* Links Styling */
 .links {
     list-style: none;
-    padding: 0;
     margin-top: 40px;
     text-align: center;
     margin-right: 35px;
@@ -109,15 +112,6 @@ h3 {
 /* Other Styles */
 .contact {
     margin-top: 18px;
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills li {
-    margin-bottom: 8px;
 }
 
 .contact a {
@@ -347,7 +341,8 @@ h3 {
     object-fit: contain;
 }
 
-.portfolio-button a {
+.portfolio-button a,
+.modal__window a {
     color: white;
     text-decoration: none;
 }
@@ -386,11 +381,6 @@ h3 {
     color: #B8B7A3;
 }
 
-
-.modal__window a {
-    color: white;
-    text-decoration: none;
-}
 
 #modal:not(:target),
 #modal_numbersgame:not(:target),
@@ -436,36 +426,15 @@ h3 {
 
 /* Media Queries for Responsiveness */
 
-/* For screens smaller than 1200px (tablets, small desktops) */
+/* For screens smaller than 1200px */
 @media (max-width: 1200px) {
     .container {
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-
-    .sidebar {
-        width: 250px;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .workexperience {
-        width: 60%;
-    }
-
-    .smallpresentationbox {
-        width: 400px;
-    }
-}
-
-/* For screens smaller than 768px (tablets in portrait or large mobile screens) */
-@media (max-width: 768px) {
-    .container {
         flex-direction: column;
-        margin: 20px;
-        /* Add 20px margin to top, bottom, left, and right */
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
     }
 
     .sidebar {
@@ -474,44 +443,198 @@ h3 {
         padding: 20px;
     }
 
-    .content {
-        width: 100%;
-        margin-right: 0;
-        height: auto;
-        padding: 20px;
+    .profile img {
+        width: 120px;
+    }
+
+    .indexbox a {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .links li {
+        font-size: 1rem;
     }
 
     .workexperience {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        margin-left: 0;
     }
 
     .smallerpresentationcontainers {
         flex-direction: column;
-        /* Stack the small boxes vertically */
-        padding: 10px;
-        /* Add some space to the sides */
     }
 
     .smallpresentationbox {
         width: 100%;
-        /* Take full width on smaller screens */
+    }
+
+    .cvbox,
+    .indexbox {
+        width: 100%;
+    }
+
+    .smallportfoliobox {
+        width: 100%;
         height: auto;
-        /* Adjust height based on content */
+    }
+
+    .portfolioimg {
+        width: 150px;
+        height: 150px;
     }
 }
 
-/* For screens smaller than 480px (small mobile screens) */
-@media (max-width: 480px) {
-    .presentationheader p {
-        font-size: 20px;
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
     }
 
-    .workexperience li {
-        font-size: 18px;
+    .content {
+        width: 100%;
+        padding: 20px;
     }
 
-    .links a {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 100px;
+    }
+
+    .indexbox a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .links li {
         font-size: 1rem;
+    }
+
+    .workexperience {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .smallpresentationbox {
+        width: 100%;
+    }
+
+    .smallportfoliobox {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolioimg {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .profile img {
+        width: 80px;
+    }
+
+    .indexbox a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .links li {
+        font-size: 1rem;
+    }
+
+    .workexperience {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .smallpresentationbox {
+        width: 100%;
+    }
+
+    .smallportfoliobox {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolioimg {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .profile img {
+        width: 70px;
+    }
+
+    .indexbox a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .links li {
+        font-size: 0.9rem;
+    }
+
+    .workexperience {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .smallpresentationbox {
+        width: 100%;
+    }
+
+    .smallportfoliobox {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolioimg {
+        width: 80px;
+        height: 80px;
     }
 }
