@@ -1,17 +1,17 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 200px;
     background-color: #f4f4f4;
     height: 100%;
     overflow-y: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h2,
 h3 {
     color: #333;
 }
+
 
 /* Layout Styles */
 .container {
@@ -149,7 +149,7 @@ h3 {
     margin-top: 25px;
     font-size: 45px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .presentationcontainer {
@@ -175,14 +175,14 @@ h3 {
     margin-right: 50px;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .workexperience li {
     margin-left: 10px;
     font-size: 22px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 5px;
     padding: 20px;
 }
@@ -213,7 +213,7 @@ h3 {
     margin-top: -25px;
     font-size: 25px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .smallpresentationbox p {
@@ -222,7 +222,7 @@ h3 {
     margin-top: 10px;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .smallpresentationbox li {
@@ -231,7 +231,7 @@ h3 {
     margin-top: -25px;
     font-size: 25px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 20px;
 }
 
@@ -259,7 +259,7 @@ h3 {
     margin-right: 50px;
     font-size: 30px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cvbox li,
@@ -269,7 +269,7 @@ h3 {
     margin-right: 50px;
     font-size: 20px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: none;
 }
 
@@ -298,7 +298,7 @@ h3 {
     text-align: center;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -306,7 +306,7 @@ h3 {
     font-size: 20px;
     list-style-type: none;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     text-align: center;
 }
@@ -401,13 +401,13 @@ h3 {
     margin-top: 0px;
     font-size: 45px;
     color: #B8B7A3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal__window p {
     font-size: 20px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     word-wrap: break-word;
     width: 700px;
 }
@@ -416,7 +416,7 @@ h3 {
     display: grid;
     place-items: center;
     font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 50px;
     color: white;
     text-decoration: none;
@@ -458,12 +458,12 @@ h3 {
         padding: 8px 16px;
     }
 
-    .links{
+    .links {
         justify-content: center;
         width: 50px;
     }
 
-    .links ul{
+    .links ul {
         display: flex;
         justify-content: center;
         width: 90px;
@@ -476,11 +476,12 @@ h3 {
         margin-right: 30px;
     }
 
-    .workexperience p{
+    .workexperience p {
         font-size: 20px;
         margin-top: 30px;
     }
-    .workexperience li{
+
+    .workexperience li {
         font-size: 20px;
         margin-left: -10px;
         margin-right: -20px;
@@ -496,7 +497,8 @@ h3 {
         height: 220px;
         margin-right: 10px;
     }
-    .smallpresentationbox p{
+
+    .smallpresentationbox p {
         font-size: 20px;
         margin-top: 0px;
     }
@@ -508,7 +510,7 @@ h3 {
         margin-right: 10px;
     }
 
-    .smallpresentationbox li{
+    .smallpresentationbox li {
         font-size: 15px;
         margin-top: -60px;
         margin-left: -10px;
@@ -519,10 +521,11 @@ h3 {
         font-size: 25px;
     }
 
-    .cvbox li{
+    .cvbox li {
         font-size: 15px;
         margin-top: -10px;
     }
+
     .indexbox li {
         font-size: 15px;
         margin-top: -20px;
@@ -543,7 +546,7 @@ h3 {
         width: 95%;
     }
 
-    .header p{
+    .header p {
         margin-top: 8px;
     }
 
@@ -551,7 +554,8 @@ h3 {
         width: 95%;
         height: 700px;
     }
-    .cvbox{
+
+    .cvbox {
         height: 720px;
         width: 95%;
     }
