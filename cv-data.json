@@ -1,0 +1,23 @@
+{
+  "education": [
+    {
+      "school": "Campus Varberg",
+      "program": "System Developer",
+      "years": "2024-2026"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Fladen Fishing",
+      "role": "Warehouse Worker (Summer Job)",
+      "years": "2020-2022",
+      "description": "Processed online orders and prepared shipments for customers and businesses."
+    },
+    {
+      "company": "Touchtech",
+      "role": "QA (Quality Assurance) Specialist",
+      "years": "2024-Present",
+      "description": "Testing and ensuring software quality by identifying bugs and suggesting improvements."
+    }
+  ]
+}

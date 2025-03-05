@@ -6,76 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serhan Gyuler Landing Page</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="cv-data.js"></script>
 </head>
 
 <body class="index">
-        <img src="" alt="">
-        <div class="container">
-            <aside class="sidebar">
-                <div class="profile">
-                    <img src="./media/9111796995.png" alt="Profilbild">
-                    <h2>Serhan Gyuler</h2>
-                    <p>Junior QA/Student</p>
+    <img src="" alt="">
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img id="profile-pic" src="./media/9111796995.png" alt="Profilbild">
+                <h2>Serhan Gyuler</h2>
+                <p>Junior QA/Student</p>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="index.html" class="navigation">Landing Page</a></li>
+                    <li><a href="aboutme.html" class="navigation">About Me</a></li>
+                    <li><a href="cv.html" class="navigation">CV</a></li>
+                    <li><a href="portfolio.html" class="navigation">Portfolio</a></li>
+                    <li><a href="contact.html " class="navigation">Contact</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div id="easteregg-area"></div>
+            <div class="header">
+                <p>Welcome To My Page</p>
+            </div>
+
+            <div class="indexcontainer">
+                <div class="indexbox">
+                    <p>About Me</p>
+                    <span>
+                        Learn more about my background, skills, passions, and what motivates me. This page gives you a
+                        glimpse into my journey and the values that drive me both personally and professionally.
+                    </span>
+                    <div class="takemethere">
+                        <span>Want to read more? Navigate to: <a href="aboutme.html" class="navigation">About
+                                Me</a></span>
+                    </div>
+
+                    <p>CV</p>
+                    <span>
+                        Here you'll find an overview of my education, work experience, and key achievements. It’s a
+                        snapshot of my professional background and the skills I’ve acquired over time.
+                    </span>
+                    <div class="takemethere">
+                        <span>Intressed to read my CV? Navigate to: <a href="cv.html" class="navigation">CV</a></span>
+                    </div>
+
+                    <p>Portfolio</p>
+                    <span>
+                        Explore some of my best work, including projects and accomplishments that showcase my abilities.
+                        This page highlights a selection of projects I've worked on, demonstrating my expertise and
+                        creativity.
+                    </span>
+                    <div class="takemethere">
+                        <span>Want to see what I have done? Navigate to: <a href="portfolio.html"
+                                class="navigation">Portfolio</a></span>
+                    </div>
+
+                    <p>Contact</p>
+                    <span>
+                        If you'd like to get in touch, this page provides all the details you need. Whether you have
+                        questions or would like to discuss opportunities, feel free to reach out!
+                    </span>
+                    <div class="takemethere">
+                        <span>Feel free to contact me: <a href="contact.html" class="navigation">Contact</a></span>
+                    </div>
                 </div>
+            </div>
+        </main>
+    </div>
 
-                <div class="links">
-                    <ul>
-                        <li><a href="index.html" class="navigation">Landing Page</a></li>
-                        <li><a href="aboutme.html" class="navigation">About Me</a></li>
-                        <li><a href="cv.html" class="navigation">CV</a></li>
-                        <li><a href="portfolio.html" class="navigation">Portfolio</a></li>
-                        <li><a href="contact.html " class="navigation">Contact</a></li>
-                    </ul>
-                </div>
-
-            </aside>
-
-            <main class="content">
-                <div class="header">
-                    <p>Welcome To My Page</p>
-                </div>
-
-                <div class="indexcontainer">
-                        <div class="indexbox">
-                            <p>About Me</p>
-                            <li>
-                                Learn more about my background, skills, passions, and what motivates me. This page gives you a glimpse into my journey and the values that drive me both personally and professionally.
-                            </li>
-                            <div class="takemethere">
-                                <li>Want to read more? Navigate to: <a href="aboutme.html" class="navigation">About Me</a></li>
-                            </div>
-
-    
-                            <p>CV</p>
-                            <li>
-                                Here you’ll find an overview of my education, work experience, and key achievements. It’s a snapshot of my professional background and the skills I’ve acquired over time.
-                            </li>
-                            <div class="takemethere">
-                                <li>Intressed to read my CV? Navigate to: <a href="cv.html" class="navigation">CV</a></li>
-                            </div>
-
-    
-                            <p>Portfolio</p>
-                            <li>
-                                Explore some of my best work, including projects and accomplishments that showcase my abilities. This page highlights a selection of projects I've worked on, demonstrating my expertise and creativity.
-                            </li>
-                            <div class="takemethere">
-                                <li>Want to see what I have done? Navigate to: <a href="portfolio.html" class="navigation">Portfolio</a></li>
-                            </div>
-
-    
-                            <p>Contact</p>
-                            <li>
-                                If you'd like to get in touch, this page provides all the details you need. Whether you have questions or would like to discuss opportunities, feel free to reach out!
-                            </li>
-                            <div class="takemethere">
-                                <li>Feel free to contact me: <a href="contact.html" class="navigation">Contact</a></li>
-                            </div>
-                        </div>
-                </div>
-            </main>
+    <!-- Popup Modal -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="./media/funny.gif" alt="Computer man" style="width:1000px;height:1000px;">
+            <audio id="sound">
+                <source src="./media/sound.mp3" type="audio/mpeg">
+            </audio>
         </div>
+    </div>
+    <script>
+        // Första påskägget (ändra bakgrundsfärg när användaren klickar på profilbilden)
+        document.getElementById('profile-pic').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'rgb(' +
+                Math.floor(Math.random() * 256) + ',' +
+                Math.floor(Math.random() * 256) + ',' +
+                Math.floor(Math.random() * 256) + ')';
+        });
+
+        // Andra påskägget (popup när användaren skriver "1337")
+        let secretCode = "1337";
+        let enteredCode = "";
+
+        document.addEventListener("keydown", function (event) {
+            enteredCode += event.key;
+
+            if (enteredCode.length > secretCode.length) {
+                enteredCode = enteredCode.slice(1);
+            }
+
+            if (enteredCode === secretCode) {
+                document.getElementById("popup").style.display = "block"; // Show the modal
+                document.getElementById("sound").play(); // Play the sound when the popup is shown
+            }
+        });
+
+        // Stäng popup när användaren klickar på stäng-knappen
+        document.querySelector(".close-btn").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none"; // Hide the modal
+        });
+
+        // Stäng popup när användaren klickar utanför popupen
+        window.addEventListener("click", function (event) {
+            var popup = document.getElementById("popup");
+            // Check if the click is on the background (the semi-transparent part)
+            if (event.target === popup) {
+                popup.style.display = "none"; // Hide the modal if clicked outside of it
+            }
+        });
+    </script>
+
 </body>
 
 </html>
