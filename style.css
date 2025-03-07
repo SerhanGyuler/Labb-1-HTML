@@ -1,8 +1,7 @@
 /* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
     padding: 10px 200px;
-    background-color: #f4f4f4;
+    background-color: #fff8dc;
     height: 100%;
     overflow-y: auto;
 }
@@ -34,14 +33,30 @@ h3 {
 
 .modal-content {
     background-color: white;
+    margin-top: 10%;
+    margin-left: 40%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    height: 500px;
+
+}
+
+.modal-content2 {
+    background-color: white;
+    margin-top: 2%;
     margin-left: 25%;
     padding: 20px;
     border: 1px solid #888;
     width: 1000px;
-    height: 900px;
+    height: 800px;
+
 }
 
-.close-btn {
+
+
+.close-btn,
+.close-btn-2 {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -49,11 +64,20 @@ h3 {
 }
 
 .close-btn:hover,
-.close-btn:focus {
+.close-btn:focus,
+.close-btn-2:hover,
+.close-btn-2:focus,
+.redbutton {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
+.redbutton {
+    color: black;
+    background-color: red;
+}
+
 
 
 /* Layout Styles */
@@ -120,7 +144,7 @@ h3 {
 
 .indexbox a:hover {
     background-color: #555;
-    color: #f4f4f4;
+    color: #fff8dc;
 }
 
 .smallportfoliobox .portfolio-button:hover {
@@ -133,7 +157,6 @@ h3 {
     margin-right: 50px;
     font-size: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     display: block;
 }
 
@@ -203,7 +226,6 @@ h3 {
     margin-top: 25px;
     font-size: 45px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .presentationcontainer {
@@ -229,14 +251,13 @@ h3 {
     margin-right: 50px;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .workexperience li {
+    margin-top: -15px;
     margin-left: 10px;
-    font-size: 22px;
+    font-size: 17px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 5px;
     padding: 20px;
 }
@@ -265,9 +286,8 @@ h3 {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: -25px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     display: block;
 }
 
@@ -277,16 +297,14 @@ h3 {
     margin-top: 10px;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .smallpresentationbox li {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: -50px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     padding: 20px;
 }
 
@@ -314,7 +332,6 @@ h3 {
     margin-right: 50px;
     font-size: 30px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .cvbox span {
@@ -323,7 +340,6 @@ h3 {
     margin-right: 50px;
     font-size: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     list-style-type: none;
     display: block;
 }
@@ -353,7 +369,6 @@ h3 {
     text-align: center;
     font-size: 35px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -361,7 +376,6 @@ h3 {
     font-size: 20px;
     list-style-type: none;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     text-align: center;
     margin-top: -10px;
@@ -458,13 +472,11 @@ h3 {
     margin-top: 0px;
     font-size: 45px;
     color: #B8B7A3;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .modal__window p {
     font-size: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     word-wrap: break-word;
     width: 700px;
 }
@@ -473,7 +485,6 @@ h3 {
     display: grid;
     place-items: center;
     font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
     margin-top: 50px;
     color: white;
     text-decoration: none;
@@ -611,5 +622,138 @@ h3 {
     .cvbox {
         height: 720px;
         width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 360px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 15px;
+        height: 100%;
+    }
+
+    .modal-content,
+    .modal-content2 {
+        width: 90%;
+        height: auto;
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    .workexperience {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .smallportfoliobox,
+    .indexbox {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin-left: -31px;
+    }
+
+    .cvbox {
+        width: 350px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin-left: -31px;
+    }
+
+    .cvbox span {
+        margin-left: 10px;
+    }
+
+    .indexbox p {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .smallpresentationbox {
+        width: 150px;
+        height: 400px;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin-left: -31px;
+    }
+
+    .header {
+        height: 70px;
+        width: 95%;
+        margin-left: -6px;
+    }
+
+    .header p {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .workexperience p,
+    .smallpresentationbox p,
+    .cvbox p {
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .links {
+        margin-right: 0;
+    }
+
+    .links ul {
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        margin-left: 95px;
+        gap: 10px;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 5px;
+        height: 40px;
+        transition: background-color 0.3sease, color 0.3sease;
+    }
+
+    .portfolioimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .indexbox span {
+        margin-top: -15px;
+        margin-left: 10px;
+        margin-right: 50px;
+        font-size: 20px;
+        color: white;
+        display: block;
+    }
+
+    .modal__window {
+        position: relative;
+        background-color: #333;
+        height: 300px;
+        padding: 4em 2em;
     }
 }

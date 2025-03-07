@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serhan Gyuler Landing Page</title>
@@ -88,14 +88,33 @@
     <div id="popup" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <img src="./media/funny.gif" alt="Computer man" style="width:1000px;height:1000px;">
-            <audio id="sound">
-                <source src="./media/sound.mp3" type="audio/mpeg">
+            <audio id="sound1">
+                <source src="./media/w.mp3" type="audio/mpeg">
             </audio>
+            <h1>Congratulations🎉🎉</h1>
+            <h1>You found the secret combination</h1>
+            <h2>Now what ever you do.....</h2>
+            <h2>Don't press the button below</h2>
+            <h2>Don't even think about it</h2>
+            <h2>DON'T PRESS THE RED BUTTON</h2>
+            <h3>DON'T DO IT</h3>
+            <h4>LAST WARNING!!!!</h4>
+            <button type="button" class="redbutton" id="redbutton">DON'T CLICK</button>
+            <!-- Second Popup Modal -->
+            <div id="popup2" class="modal">
+                <div class="modal-content2">
+                    <span class="close-btn-2">&times;</span>
+                    <img src="./media/funny.gif" alt="Computer man" style="width:900px;height:800px;">
+                    <audio id="sound2">
+                        <source src="./media/sound.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
         </div>
     </div>
     <script>
-        // Första påskägget (ändra bakgrundsfärg när användaren klickar på profilbilden)
+        // First Easter egg (change background color when the user clicks on the profile picture)
         document.getElementById('profile-pic').addEventListener('click', function () {
             document.body.style.backgroundColor = 'rgb(' +
                 Math.floor(Math.random() * 256) + ',' +
@@ -103,7 +122,7 @@
                 Math.floor(Math.random() * 256) + ')';
         });
 
-        // Andra påskägget (popup när användaren skriver "1337")
+        // Second Easter egg (popup when the user types "1337")
         let secretCode = "1337";
         let enteredCode = "";
 
@@ -116,23 +135,51 @@
 
             if (enteredCode === secretCode) {
                 document.getElementById("popup").style.display = "block"; // Show the modal
-                document.getElementById("sound").play(); // Play the sound when the popup is shown
+                let audio = document.getElementById("sound1");
+                audio.volume = 0.1; // Set volume to 10% 
+                audio.play();
             }
         });
 
-        // Stäng popup när användaren klickar på stäng-knappen
+        // Thirst Easter egg (popup when the user press the red button)
+        document.getElementById('redbutton').addEventListener('click', function () {
+            document.getElementById("popup2").style.display = "block"; // Show the modal
+            let audio = document.getElementById("sound2");
+            audio.volume = 0.5; // Set volume to 50% 
+            audio.play();
+        });
+
+        // Close popup when the user clicks the close button
         document.querySelector(".close-btn").addEventListener("click", function () {
             document.getElementById("popup").style.display = "none"; // Hide the modal
         });
 
-        // Stäng popup när användaren klickar utanför popupen
+        // Close popup when the user clicks outside the popup
         window.addEventListener("click", function (event) {
             var popup = document.getElementById("popup");
-            // Check if the click is on the background (the semi-transparent part)
             if (event.target === popup) {
-                popup.style.display = "none"; // Hide the modal if clicked outside of it
+                popup.style.display = "none"; // Hide the modal
             }
         });
+
+        // Show second popup when the red button is clicked
+        document.querySelector(".redbutton").addEventListener("click", function () {
+            document.getElementById("popup2").style.display = "block";
+        });
+
+        // Close the second popup
+        document.querySelector(".close-btn-2").addEventListener("click", function () {
+            document.getElementById("popup2").style.display = "none";
+        });
+
+        // Close the second popup when the user clicks outside of it
+        window.addEventListener("click", function (event) {
+            let popup2 = document.getElementById("popup2");
+            if (event.target === popup2) {
+                popup2.style.display = "none";
+            }
+        });
+
     </script>
 
 </body>
