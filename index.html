@@ -2,14 +2,14 @@
 <html lang="en">
 
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serhan Gyuler Landing Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <script src="cv-data.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Serhan Gyuler Landing Page</title>
+<link rel="stylesheet" href="style.css" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<script src="cv-data.js"></script>
 </head>
 
 <body class="index">
@@ -113,74 +113,7 @@
 
         </div>
     </div>
-    <script>
-        // First Easter egg (change background color when the user clicks on the profile picture)
-        document.getElementById('profile-pic').addEventListener('click', function () {
-            document.body.style.backgroundColor = 'rgb(' +
-                Math.floor(Math.random() * 256) + ',' +
-                Math.floor(Math.random() * 256) + ',' +
-                Math.floor(Math.random() * 256) + ')';
-        });
-
-        // Second Easter egg (popup when the user types "1337")
-        let secretCode = "1337";
-        let enteredCode = "";
-
-        document.addEventListener("keydown", function (event) {
-            enteredCode += event.key;
-
-            if (enteredCode.length > secretCode.length) {
-                enteredCode = enteredCode.slice(1);
-            }
-
-            if (enteredCode === secretCode) {
-                document.getElementById("popup").style.display = "block"; // Show the modal
-                let audio = document.getElementById("sound1");
-                audio.volume = 0.1; // Set volume to 10% 
-                audio.play();
-            }
-        });
-
-        // Thirst Easter egg (popup when the user press the red button)
-        document.getElementById('redbutton').addEventListener('click', function () {
-            document.getElementById("popup2").style.display = "block"; // Show the modal
-            let audio = document.getElementById("sound2");
-            audio.volume = 0.5; // Set volume to 50% 
-            audio.play();
-        });
-
-        // Close popup when the user clicks the close button
-        document.querySelector(".close-btn").addEventListener("click", function () {
-            document.getElementById("popup").style.display = "none"; // Hide the modal
-        });
-
-        // Close popup when the user clicks outside the popup
-        window.addEventListener("click", function (event) {
-            var popup = document.getElementById("popup");
-            if (event.target === popup) {
-                popup.style.display = "none"; // Hide the modal
-            }
-        });
-
-        // Show second popup when the red button is clicked
-        document.querySelector(".redbutton").addEventListener("click", function () {
-            document.getElementById("popup2").style.display = "block";
-        });
-
-        // Close the second popup
-        document.querySelector(".close-btn-2").addEventListener("click", function () {
-            document.getElementById("popup2").style.display = "none";
-        });
-
-        // Close the second popup when the user clicks outside of it
-        window.addEventListener("click", function (event) {
-            let popup2 = document.getElementById("popup2");
-            if (event.target === popup2) {
-                popup2.style.display = "none";
-            }
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

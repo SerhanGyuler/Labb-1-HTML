@@ -7,50 +7,81 @@
     <title>Serhan Gyuler Contact</title>
     <link rel="stylesheet" href="style.css" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="contact">
-        <div class="container">
-            <aside class="sidebar">
-                <div class="profile">
-                    <img src="./media/9111796995.png" alt="Profilbild">
-                    <h2>Serhan Gyuler</h2>
-                    <p>Junior QA/Student</p>
-                </div>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img id="profile-pic" src="./media/9111796995.png" alt="Profilbild">
+                <h2>Serhan Gyuler</h2>
+                <p>Junior QA/Student</p>
+            </div>
 
-                <div class="links">
-                    <ul>
-                        <li><a href="index.html" class="navigation">Landing Page</a></li>
-                        <li><a href="aboutme.html" class="navigation">About Me</a></li>
-                        <li><a href="cv.html" class="navigation">CV</a></li>
-                        <li><a href="portfolio.html" class="navigation">Portfolio</a></li>
-                        <li><a href="contact.html" class="navigation">Contact</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <div class="links">
+                <ul>
+                    <li><a href="index.html" class="navigation">Landing Page</a></li>
+                    <li><a href="aboutme.html" class="navigation">About Me</a></li>
+                    <li><a href="cv.html" class="navigation">CV</a></li>
+                    <li><a href="portfolio.html" class="navigation">Portfolio</a></li>
+                    <li><a href="contact.html" class="navigation">Contact</a></li>
+                </ul>
+            </div>
+        </aside>
 
-            <main class="content">
-                <section class="contactinfo">
-                    <div class="header">
-                        <p>Contact</p>
-                    </div>
-                    <div class="indexcontainer">
-                        <div class="indexbox">
-                            <p>Happy to hear you want to come in contact :)</p>
-                            <div class="job">
-                                <p>📞 0737739847</p>
-                                <p>✉️ serhan.gyuler@edu.varberg.se</p>
-                                <p>📍 Bergsgatan 23, Varberg, Halland</p>
-                                <p>🔗 <a href="https://www.linkedin.com/in/serhan-gyuler-6a1332309/"
-                                        target="_blank">Linkedin</a></p>
-                            </div>
+        <main class="content">
+            <section class="contactinfo">
+                <div class="header">
+                    <p>Contact</p>
+                </div>
+                <div class="indexcontainer">
+                    <div class="indexbox">
+                        <p>Happy to hear you want to come in contact :)</p>
+                        <div class="job">
+                            <p>📞 0737739847</p>
+                            <p>✉️ serhan.gyuler@edu.varberg.se</p>
+                            <p>📍 Bergsgatan 23, Varberg, Halland</p>
+                            <p>🔗 <a href="https://www.linkedin.com/in/serhan-gyuler-6a1332309/"
+                                    target="_blank">Linkedin</a></p>
                         </div>
+                    </div>
                 </div>
-                </section>
-            </main>
+            </section>
+        </main>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <audio id="sound1">
+                <source src="./media/w.mp3" type="audio/mpeg">
+            </audio>
+            <h1>Congratulations🎉🎉</h1>
+            <h1>You found the secret combination</h1>
+            <h2>Now what ever you do.....</h2>
+            <h2>Don't press the button below</h2>
+            <h2>Don't even think about it</h2>
+            <h2>DON'T PRESS THE RED BUTTON</h2>
+            <h3>DON'T DO IT</h3>
+            <h4>LAST WARNING!!!!</h4>
+            <button type="button" class="redbutton" id="redbutton">DON'T CLICK</button>
+            <!-- Second Popup Modal -->
+            <div id="popup2" class="modal">
+                <div class="modal-content2">
+                    <span class="close-btn-2">&times;</span>
+                    <img src="./media/funny.gif" alt="Computer man" style="width:900px;height:800px;">
+                    <audio id="sound2">
+                        <source src="./media/sound.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
         </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
