@@ -1,3 +1,4 @@
+// CV INFORMATION
 document.addEventListener("DOMContentLoaded", loadCV);
 
 async function loadCV() {
@@ -41,11 +42,12 @@ function displayWorkExperience(workExperience) {
   workExperience.forEach((w) => {
     const jobItem = document.createElement("div");
     jobItem.innerHTML = `
-                    <span>${w.company}, ${w.role} (${w.years}) <br>${w.description}</span>`;
+      <span>${w.company}, ${w.role} (${w.years}) <br>${w.description}</span>`;
     workContainer.appendChild(jobItem);
   });
 }
 
+// EASTER EGGS
 // First Easter egg (change background color when the user clicks on the profile picture)
 document.getElementById("profile-pic").addEventListener("click", function () {
   document.body.style.backgroundColor =
@@ -115,3 +117,53 @@ window.addEventListener("click", function (event) {
     popup2.style.display = "none";
   }
 });
+
+// PORTFOLIO UPDATE //GitHub API
+const BASE_URL = "https://api.github.com/users";
+const USERNAME = "SerhanGyuler";
+
+const portfolioContainer = document.querySelector(
+  ".smallerportfoliocontainers"
+); // Select container to display projects
+
+// Wait for the DOM to load before running the function
+document.addEventListener("DOMContentLoaded", getGitHubProjects);
+
+async function getGitHubProjects() {
+  try {
+    portfolioContainer.innerHTML = "<p>Loading projects...</p>";
+
+    const url = `${BASE_URL}/${USERNAME}/repos`; // GitHub API endpoint to get repos for the user
+    const response = await fetch(url); // Send request to GitHub API
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`); // Handle errors if response is not ok
+    }
+
+    const repos = await response.json(); // Convert response to JSON
+    displayProjects(repos); // Call function to display fetched projects
+  } catch (error) {
+    console.error("Error fetching GitHub repos:", error); // Log error to console
+    portfolioContainer.innerHTML = "<p>Failed to load projects.</p>"; // Show error message if fetching fails
+  }
+}
+
+function displayProjects(repos) {
+  portfolioContainer.innerHTML = ""; // Clear the loading message after data is fetched
+
+  repos.forEach((repo) => {
+    const projectBox = document.createElement("div"); // Create a new div for each project
+    projectBox.classList.add("smallportfoliobox"); // Add CSS class to the new div
+
+    projectBox.innerHTML = `
+      <p>${repo.name}</p> <!-- Project name -->
+      <span>${repo.description}</span> <!-- Project description -->
+      
+      <div class="portfolio-button">
+            <a href="${repo.html_url}" target="_blank" class="repo-link">Visit ${repo.name} Repository</a> <!-- Link to GitHub repo -->
+      </div>
+    `;
+
+    portfolioContainer.appendChild(projectBox); // Add the project box to the container
+  });
+}
